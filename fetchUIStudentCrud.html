@@ -108,14 +108,13 @@
                 if (!res.ok) {
                   console.error(res.error);
                 }
+                else{
+                  //student = students.filter(u => (u.id == idToDelete) ? false : true)
+                  students = students.filter(s => s.id !== idToDelete)
+                  makeRows()
+                }
               })
               .catch( err => console.error(err.message));
-
-
-      //student = students.filter(u => (u.id == idToDelete) ? false : true)
-      students = students.filter(s => s.id !== idToDelete)
-
-      makeRows()
     }
 
     //if (target.dataset.dataEdit) {
